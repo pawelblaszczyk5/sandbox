@@ -41,65 +41,75 @@
             overflow: hidden;
         }
 
-        .col-2dot4,
-        .col-sm-2dot4,
-        .col-md-2dot4,
-        .col-lg-2dot4,
-        .col-xl-2dot4 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
 
-        .col-2dot4 {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
-            max-width: 20%;
-        }
+        @media (max-width: 991px) {
 
-        @media (min-width: 540px) {
-            .col-sm-2dot4 {
-                -webkit-box-flex: 0;
-                -ms-flex: 0 0 20%;
-                flex: 0 0 20%;
-                max-width: 20%;
+            .icon-container {
+                position: relative;
+                width: 45%;
+                margin-bottom: 5%;
+
+            }
+
+            .container-margin-little {
+                margin-right: 10%;
             }
         }
 
-        @media (min-width: 720px) {
-            .col-md-2dot4 {
-                -webkit-box-flex: 0;
-                -ms-flex: 0 0 20%;
-                flex: 0 0 20%;
-                max-width: 20%;
+
+        @media (min-width: 992px) {
+
+            .icon-container {
+                position: relative;
+                width: 16%;
+                margin-bottom: 5%;
+            }
+
+            .container-margin {
+                margin-right: 5%;
             }
         }
 
-        @media (min-width: 960px) {
-            .col-lg-2dot4 {
-                -webkit-box-flex: 0;
-                -ms-flex: 0 0 20%;
-                flex: 0 0 20%;
-                max-width: 20%;
-            }
+        .bglight2 {
+            background-color: RGB(246, 246, 246);
         }
 
-        @media (min-width: 1140px) {
-            .col-xl-2dot4 {
-                -webkit-box-flex: 0;
-                -ms-flex: 0 0 20%;
-                flex: 0 0 20%;
-                max-width: 20%;
-            }
+        .bglight3 {
+            background-color: RGB(230, 230, 230);
         }
-        .bglight2{
-            background-color: RGB(246,246,246);
+
+
+
+        .icon-container:before {
+            content: "";
+            float: left;
+            padding-top: 100%;
+            /* initial ratio of 1:1*/
         }
-        .bglight3{
-            background-color: RGB(230,230,230);
+
+        .image-icon {
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            margin-left: 15%;
+            margin-top: 15%;
+        }
+
+        .container-form {
+            background-color: RGB(109, 108, 207);
+            color: white;
+            padding-left: 8.5%;
+            padding-right: 8.5%;
+        }
+
+        .contact-heading {
+            font-size: 48px;
+            width: fit-content;
+        }
+
+        .underlined-text {
+            border-bottom: 4px solid white;
+            padding-bottom: 3px;
         }
     </style>
 </head>
@@ -183,37 +193,59 @@
     </div>
     <div class="container bg-light py-5">
         <div class="row">
-            <div class="col-lg-2dot4 col-6 bglight3">
-                <p>Div</p>
+            <div class="bglight3 container-margin container-margin-little icon-container">
+                <img src="img/ii1.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6  bglight2">
-                <p>Div</p>
+            <div class=" bglight2 container-margin icon-container">
+                <img src="img/ii2.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6  bglight3">
-                <p>Div</p>
+            <div class=" bglight3 container-margin container-margin-little icon-container">
+                <img src="img/ii3.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6  bglight2">
-                <p>Div</p>
+            <div class="bglight2 container-margin icon-container">
+                <img src="img/ii4.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6  bglight3">
-                <p>Div</p>
+            <div class=" bglight3 container-margin-little icon-container">
+                <img src="img/ii5.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6 bglight2">
-                <p>Div</p>
+            <div class="bglight2 container-margin  icon-container">
+                <img src="img/ii6.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6  bglight3">
-                <p>Div</p>
+            <div class=" bglight3 container-margin container-margin-little icon-container">
+                <img src="img/ii7.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6  bglight2">
-                <p>Div</p>
+            <div class=" bglight2 container-margin icon-container">
+                <img src="img/ii8.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6 bglight3">
-                <p>Div</p>
+            <div class="bglight3 container-margin container-margin-little icon-container">
+                <img src="img/ii9.svg" alt="icon" class="image-icon">
             </div>
-            <div class="col-lg-2dot4 col-6 bglight2 ">
-                <p>Div</p>
+            <div class="bglight2 icon-container">
+                <img src="img/ii10.svg" alt="icon" class="image-icon">
             </div>
         </div>
+    </div>
+    <div class="container container-form py-5">
+        <h2 class="mx-auto contact-heading">Ko<span class="underlined-text">nta</span>kt</h2>
+        <form>
+            <label for="name">Imię</label>
+            <div class="row">
+                
+                <div class="col-lg-6">
+                    <input type="text" id="name" class="form-control" placeholder="Wpisz imię">
+
+                </div>
+                <div class="col-lg-6">
+                    <select id="topic" class="form-control">
+                        <option selected>Wybierz temat</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+        </form>
     </div>
 
 </body>
