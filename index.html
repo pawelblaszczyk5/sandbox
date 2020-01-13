@@ -111,6 +111,41 @@
             border-bottom: 4px solid white;
             padding-bottom: 3px;
         }
+
+        .btn-submit-custom {
+            color: white;
+            background-color: RGB(109, 108, 207);
+            width: 33%;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer-container {
+            background-color: RGB(240, 240, 240);
+        }
+
+        .footer-container p {
+            font-size: 12px;
+        }
+
+        .btn-newsettler {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 70%;
+            font-weight: bold;
+
+        }
+
+        .btn-newsettler:hover {
+            background-color: RGB(109, 108, 207);
+            color: white;
+        }
+
+        .logo-container {
+            width: fit-content;
+        }
     </style>
 </head>
 
@@ -191,7 +226,7 @@
             </div>
         </div>
     </div>
-    <div class="container bg-light py-5">
+    <div class="container bg-white pt-5">
         <div class="row">
             <div class="bglight3 container-margin container-margin-little icon-container">
                 <img src="img/ii1.svg" alt="icon" class="image-icon">
@@ -226,26 +261,111 @@
         </div>
     </div>
     <div class="container container-form py-5">
-        <h2 class="mx-auto contact-heading">Ko<span class="underlined-text">nta</span>kt</h2>
+        <h2 class="mx-auto mb-5 contact-heading">Ko<span class="underlined-text">nta</span>kt</h2>
         <form>
-            <label for="name">Imię</label>
+
             <div class="row">
-                
-                <div class="col-lg-6">
-                    <input type="text" id="name" class="form-control" placeholder="Wpisz imię">
+
+                <div class="col-lg-6 form-group">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" placeholder="Wpisz imię">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="mail" class="form-control" placeholder="Adres e-mail">
+                    </div>
+                    <div class="form-group">
+                        <p>Jestem:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="role" id="client" value="client" checked>
+                            <label class="form-check-label" for="client">
+                                Klientem
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="role" id="model" value="model">
+                            <label class="form-check-label" for="model">
+                                Modelką
+                            </label>
+                        </div>
+                    </div>
+
+
 
                 </div>
-                <div class="col-lg-6">
-                    <select id="topic" class="form-control">
-                        <option selected>Wybierz temat</option>
-                        <option>...</option>
-                    </select>
+                <div class="col-lg-6 form-group">
+                    <div class="form-group">
+                        <select id="topic" class="form-control">
+                            <option selected>Wybierz temat</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="Message" rows="6" placeholder="Treść wiadomości"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="row"></div>
-            <div class="row"></div>
-            <div class="row"></div>
-        </form>
+            <div class="row form-group">
+                <div class="form-check mx-auto">
+                    <input class="form-check-input" type="checkbox" value="" id="rodoCheck">
+                    <label class="form-check-label" for="rodoCheck">
+                        Wyrażam zgodę na przetwarzanie moich danych osobowych
+                    </label>
+                </div>
+            </div>
+            <div class="row form-group ">
+
+                <button type="submit" class="btn btn-submit-custom mx-auto">Wyślij wiadomość</button>
+
+            </div>
+    </div>
+    </form>
+    <div class="container footer-container py-5">
+        <div class="row">
+            <div class="col-lg-4 py-4">
+                <div class="mx-auto logo-container">
+                    <img src="img/logo.png" alt="logo" class="img-fluid mx-auto">
+                </div>
+            </div>
+            <div class="col-lg-4 py-4">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="mx-auto logo-container">
+                            <a href="#"><img src="img/fb.png" alt="logo-fb" class="img-fluid "></a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mx-auto logo-container">
+                            <a href="#"><img src="img/tw.png" alt="logo-tw" class="img-fluid "></a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mx-auto logo-container">
+                            <a href="#"><img src="img/ig.png" alt="logo-ig" class="img-fluid "></a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mx-auto my-auto logo-container">
+                            <a href="#"><img src="img/be.png" alt="logo-be" class="img-fluid "></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-lg-4 py-4">
+                <div class="row">
+                    <p class="mx-auto mb-2">
+                        Tipy, techniki i nowości na rynku fotograficznym
+                    </p>
+
+                    <button class="btn btn-newsettler mx-auto">
+                        Newsettler
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
 </body>
